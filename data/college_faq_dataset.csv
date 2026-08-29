@@ -1,0 +1,126 @@
+intent,question,answer
+general,Hi There,"Hello!, How may I assist you today"
+general,Hello,"Hi, How would you like my help"
+admissions,admission process,You can apply online through the college portal
+admissions,How can I apply for admission?,You can apply online through the college portal.
+admissions,how to apply for this college?,You can apply online through the college portal
+admissions,What documents are required for admission?,"You need marksheets, ID proof, and the application form".
+fees,What is the annual fee?,"The annual fee is ₹85,000 for undergraduate programs".
+fees,Are scholarships available?,"Yes, merit-based scholarships are available".
+fees,How much is fees here,"The annual fee is ₹85,000 for undergraduate programs".
+courses,What courses are offered?,"We offer B.Tech, M.Tech, MBA, and MCA programs".
+courses,What course is there,"We offer B.Tech, M.Tech, MBA, and MCA programs".
+courses,Do you offer doctoral programs?,"Yes, doctoral programs are available in engineering and science".
+placements,Which companies visit for placements?,"Top recruiters include Infosys, TCS, Wipro, and Deloitte".
+placements,What is the average placement package?,"The average package is ₹6 LPA, with the highest up to ₹25 LPA".
+Internships,What companies come for internship?,Start ups and established firms also deliver internshipand also stipend is available.
+Internships,What about internships?,Start ups and established firms also deliver internshipand also stipend is available.
+admissions,How can I apply for admission?,You can apply online through the college portal.
+admissions,What’s the admission process?,You can apply online through the college portal.
+admissions,How do I get into this college?,You can apply online through the college portal.
+admissions,Where can I find the application form?,The application form is available on the college website.
+admissions,What documents are needed for admission?,"You’ll need marksheets, ID proof, and the application form".
+admissions,When does admission start?,Admissions usually open in May and close by July.
+admissions,Is there an entrance exam?,"Yes, some programs require an entrance exam".
+admissions,Can I apply offline?,Applications are accepted online only.
+admissions,What are the eligibility criteria?,Eligibility depends on the program; check the admissions page.
+admissions,How do I check my admission status?,You can track your application on the college portal.
+admissions,Is there a management quota?,"Yes, limited seats are available under management quota".
+admissions,Can I apply for multiple courses?"Yes, you can apply for more than one course".
+admissions,What’s the last date to apply?"The last date is usually announced on the college website".
+admissions,Do you have direct admission?,Direct admission is available for certain programs.
+admissions,How do I pay the application fee?,You can pay online through the portal using debit or credit card.
+admissions,Can I edit my application after submission?,"Yes, you can edit it before the deadline".
+admissions,Is there any counseling process?,"Yes, counseling is conducted after entrance results".
+admissions,How do I get admission confirmation?,You’ll receive an email once your admission is approved.
+admissions,What’s the intake capacity?,It varies by department and program.
+admissions,Are international students accepted?,"Yes, international students can apply through the global admissions section".
+admissions,Can I apply with provisional marks?,"Yes, provisional marks are accepted initially".
+admissions,Is there any age limit for admission?,"No, there’s no strict age limit".
+admissions,How do I contact the admissions office?,You can reach them via the contact page on the website.
+admissions,Is there any scholarship during admission?,"Yes, merit-based scholarships are available for new applicants".
+fees,What is the annual fee?,"The annual fee is ₹85,000 for undergraduate programs".
+fees,How much do I pay per semester?,The semester fee is half of the annual fee.
+fees,Are scholarships available?,"Yes, merit-based scholarships are available".
+fees,Is there a late fee penalty?,A small penalty applies for late payments.
+fees,Can I pay fees online?,"Yes, you can pay through the student portal".
+fees,Do you accept UPI or net banking?,"Yes, both are accepted".
+fees,Are hostel charges included?,Hostel fees are separate from tuition fees.
+fees,Is there a refund policy?,Fees are refundable before the academic session starts.
+fees,Can I pay in installments?,"Yes, installment options are available".
+fees,Do you offer fee concessions?,"Yes, concessions are available for eligible students".
+fees,Is there a waiver for top rankers?,"Yes, top rankers get partial fee waivers".
+fees,What’s the total cost for four years?,It’s approximately ₹3.4 lakhs for undergraduate programs.
+fees,Do you have financial aid programs?,"Yes, financial aid is available for eligible students".
+fees,Are exam fees separate?,"Yes, exam fees are charged per semester".
+fees,Can I pay fees offline?,"Yes, you can pay at the accounts office".
+fees,Is there a discount for early payment?,"No, but timely payment avoids penalties".
+fees,How do I get a fee receipt?,You can download it from the student portal.
+fees,What’s the fee for postgraduate courses?,Postgraduate programs have different fee structures.
+fees,Are there hidden charges?,"No, all charges are listed on the fee structure page".
+fees,How do I apply for scholarship?,You can apply through the student services portal.
+courses,What courses are offered?,"We offer B.Tech, M.Tech, MBA, and MCA programs".
+courses,Do you have postgraduate programs?,"Yes, we offer M.Tech and MBA programs".
+courses,What engineering branches are available?,"We offer Computer Science, Mechanical, Civil, and Electrical Engineering".
+courses,Are diploma courses offered?,"Yes, diploma courses are available in select fields".
+courses,Do you offer PhD programs?,"Yes, doctoral programs are available in engineering and science".
+courses,What are MBA specializations?,"MBA offers HR, Finance, Marketing, and Operations".
+courses,Is computer science available?,"Yes, B.Tech in Computer Science is available".
+courses,Do you have distance learning?,"Currently, we offer only regular programs".
+courses,Are short-term certifications available?,"Yes, we offer skill-based certifications".
+courses,What’s the duration of each course?,Undergraduate programs are 4 years; postgraduate are 2 years.
+courses,Are language courses offered?,"Yes, we offer elective language courses".
+courses,Can I switch courses after admission?,"Yes, within the first semester".
+courses,Do you offer AI or Data Science?,"Yes, specialized programs in AI and Data Science are available".
+courses,What’s the syllabus for B.Tech?,The syllabus is available on the academic portal.
+courses,Are internships part of the course?,"Yes, internships are mandatory for most programs".
+courses,Do you have evening classes?,"No, classes are conducted during the day".
+courses,Are practical labs available?,"Yes, all technical courses include lab sessions".
+courses,Do you offer online courses?,Some certification programs are online.
+courses,What are elective subjects?,Electives allow students to choose topics of interest.
+courses,Is there a foreign exchange program?,"Yes, we have collaborations with international universities".
+courses,Are interdisciplinary courses available?,"Yes, students can choose interdisciplinary electives".
+courses,What’s the medium of instruction?,English is the primary medium of instruction.
+courses,Can I take minor subjects?,"Yes, minor subjects are available for all programs".
+courses,Are industry-linked courses available?,"Yes, we offer courses in collaboration with industry partners".
+courses,Do you offer research programs?,"Yes, research opportunities are available for postgraduate students".
+placements,Which companies visit for placements?,"Top recruiters include Infosys, TCS, Wipro, and Deloitte".
+placements,What is the average package?,"The average package is ₹6 LPA, with the highest up to ₹25 LPA".
+placements,Do all students get placed?,Most eligible students receive placement offers.
+placements,When do placements start?,Placement drives begin in the final year.
+placements,Are internships part of placements?,"Yes, many companies offer internships leading to placements".
+placements,Which companies offer the highest packages?,Companies like Amazon and Microsoft offer top packages.
+placements,Do you have campus interviews?,"Yes, campus interviews are conducted regularly".
+placements,Are placement training sessions available?,"Yes, we provide training in aptitude and communication skills".
+placements,What’s the placement percentage?,Around 90% of students get placed every year.
+placements,Do startups visit for placements?,"Yes, several startups participate in placement drives".
+placements,Is there a placement cell?,"Yes, the college has a dedicated placement cell".
+placements,How do I register for placements?,You can register through the placement portal.
+placements,Are international placements available?,"Yes, a few companies offer overseas opportunities".
+placements,Do you help with resume building?,"Yes, workshops are conducted for resume preparation".
+placements,What’s the highest salary offered?,The highest package offered was ₹25 LPA.
+placements,Are internships counted as placements?,"No, internships are separate but may lead to placements".
+placements,Do you have alumni placement support?,"Yes, alumni often help current students with referrals".
+placements,Are placement drives department-specific?,"Yes, drives are organized by department".
+placements,How do I contact the placement cell?,You can reach them via the placement office.
+placements,Do you provide mock interviews?,"Yes, mock interviews are conducted before placements".
+internships,What companies come for internships?,Startups and established firms offer internships.
+internships,Do you provide internship opportunities?,"Yes, internship opportunities are available for all students".
+internships,Are internships paid?,"Some internships are paid, others are unpaid".
+internships,Is stipend available?,"Yes, stipends are available for certain internships".
+internships,How long are internships?,Internships usually last 2–6 months.
+internships,Are internships mandatory?,"Yes, internships are mandatory for most programs".
+internships,Do startups offer internships?,"Yes, startups regularly offer internships".
+internships,Do big companies offer internships?,"Yes, big companies also provide internships".
+internships,Can I get an internship abroad?,"Yes, international internships are available".
+internships,Do you help with internship placements?,"Yes, the placement cell assists with internships".
+internships,Are internships part of the curriculum?,"Yes, internships are integrated into the curriculum".
+internships,Do you provide summer internships?,"Yes, summer internships are available".
+internships,Do you provide winter internships?,"Yes, winter internships are available".
+internships,What’s the average stipend?,"The average stipend is ₹10,000 per month".
+internships,Do you have tie-ups with companies?,"Yes, we have tie-ups with multiple companies".
+internships,Can I choose my internship domain?,"Yes, students can choose their preferred domain".
+internships,Do you provide certificate for internships?,"Yes, certificates are provided after completion".
+internships,Are internships available for MBA students?,"Yes, MBA students also get internships".
+internships,Are internships available for engineering students?,"Yes, engineering students get internships".
+internships,Do you provide research internships?,"Yes, research internships are available for interested students".
