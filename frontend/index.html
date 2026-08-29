@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Future Assistant</title>
+  <style>
+   body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at 30% 30%, #002b5c, #003366, #001a33);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Animated oceanic shimmer */
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 40% 40%, rgba(0, 255, 255, 0.25), transparent 70%),
+    radial-gradient(circle at 70% 60%, rgba(0, 153, 255, 0.2), transparent 70%);
+  animation: shimmer 12s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+@keyframes shimmer {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+  50% { transform: translate(-10%, -10%) scale(1.1); opacity: 1; }
+  100% { transform: translate(10%, 10%) scale(1); opacity: 0.8; }
+}
+
+.chat-container 
+{
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 51, 102, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  width: 420px;
+  padding: 25px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4), 0 0 80px rgba(0, 153, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .header h2 {
+      color: #aeefff;
+      font-weight: 600;
+    }
+
+    .header .icon {
+      font-size: 20px;
+      color: #aeefff;
+    }
+
+    #chatbox {
+      height: 450px;
+      overflow-y: auto;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      display: flex;
+      align-items: flex-end;
+      margin: 8px 0;
+    }
+
+    .avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .bubble {
+      padding: 10px 15px;
+      border-radius: 20px;
+      max-width: 70%;
+      word-wrap: break-word;
+      position: relative;
+    }
+
+    .user .bubble {
+      background: linear-gradient(135deg, #0077be, #00bcd4);
+      align-self: flex-end;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .bot .bubble {
+      background: linear-gradient(135deg, #26a69a, #80cbc4);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .timestamp {
+      font-size: 10px;
+      color: #b2ebf2;
+      margin-top: 3px;
+    }
+
+    .input-area {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    #input {
+      width: 75%;
+      padding: 10px;
+      border-radius: 15px;
+      border: none;
+      outline: none;
+      background: hsla(171, 27%, 85%, 0.649);
+      color: #fff;
+    }
+
+    #send {
+      padding: 10px 15px;
+      border-radius: 15px;
+      border: none;
+      background: #00acc1;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #send:hover {
+      background: #00838f;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      padding: 6px 12px;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      cursor: pointer;
+      font-size: 12px;
+      transition: 0.3s;
+    }
+
+    .btn.yes {
+      background: transparent;
+      color: #00e5ff;
+      border-color: #00e5ff;
+    }
+
+    .btn.no {
+      background: transparent;
+      color: #ff4081;
+      border-color: #ff4081;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="header">
+      <h2>🌊 Future Assistant</h2>
+      <div class="icon">🌙</div>
+    </div>
+
+    <div id="chatbox"></div>
+
+    <div class="input-area">
+      <input id="input" type="text" placeholder="Type a message...">
+      <button id="send">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const chatbox = document.getElementById("chatbox");
+    const input = document.getElementById("input");
+    const send = document.getElementById("send");
+
+    function addMessage(text, sender) {
+      const msg = document.createElement("div");
+      msg.className = "message " + sender;
+
+      const avatar = document.createElement("div");
+      avatar.className = "avatar";
+      avatar.textContent = sender === "user" ? "👤" : "🤖";
+
+      const bubble = document.createElement("div");
+      bubble.className = "bubble";
+      bubble.textContent = text;
+
+      const timestamp = document.createElement("div");
+      timestamp.className = "timestamp";
+      const now = new Date();
+      timestamp.textContent = now.getHours() + ":" + String(now.getMinutes()).padStart(2, '0');
+
+      msg.appendChild(avatar);
+      msg.appendChild(bubble);
+      msg.appendChild(timestamp);
+      chatbox.appendChild(msg);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    send.addEventListener("click", async () => {
+      const query = input.value;
+      if (!query) return;
+      addMessage(query, "user");
+      input.value = "";
+
+      const response = await fetch("http://127.0.0.1:5000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+      });
+      const data = await response.json();
+      addMessage(data.response, "bot");
+    });
+  </script>
+</body>
+</html>
