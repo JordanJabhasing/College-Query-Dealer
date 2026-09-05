@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧑‍🎓 College Chatbot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('college-camp.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .dark-mode body {
+       background: url('college-campus-night.jpg') no-repeat center center fixed;
+       background-size: cover;
+   }
+    body.dark-mode .header h2 {
+     color: #f0f0f0; /* light grey text for dark mode */
+    }
+
+    .dark-mode .chat-container {
+       background: rgba(30,30,30,0.9);
+       color: #eee;
+   }
+      .dark-mode .user { background: #2980b9; }
+      .dark-mode .bot { background: #27ae60; }
+
+
+    .chat-container {
+      background: rgba(166, 240, 169, 0.9);
+      border-radius: 20px;
+      width: 500px;
+      padding: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .header {
+  display: flex;
+  justify-content: space-between; /* pushes title left, toggle right */
+  align-items: center;
+  margin-bottom: 20px; /* gap below header */
+}
+   .header h2 {
+     transition: color 0.3s ease;
+    }
+
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+#toggle {
+  margin-left: 20px;   /* gap between toggle and header text */
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+  cursor: pointer;
+}
+
+    .header img {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+
+    .header h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #2c3e50;
+    }
+
+    #chatbox {
+      height: 550px;
+      overflow-y: auto;
+      border-radius: 12px;
+      background: #eef0c8;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .user, .bot {
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 12px;
+      max-width: 80%;
+      word-wrap: break-word;
+      display: flex;
+      align-items: center;
+    }
+
+    .user {
+      background: #57ade7;
+      color: #fff;
+      align-self: flex-end;
+      justify-content: flex-end;
+    }
+
+    .bot {
+      background: #cc5b2e;
+      color: #fff;
+      align-self: flex-start;
+      justify-content: flex-start;
+    }
+
+    .input-area {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #input {
+      width: 75%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    #send {
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: none;
+      background: #2980b9;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #send:hover {
+      background: #1f6391;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="header">
+      <img src="chat-bot.png" alt="Bot Icon">
+      <h2>🎓 College Assistant</h2>
+      <div style="flex-grow: 1;"></div>
+    <button id="modeToggle">🌙</button>
+    </div>
+    <div id="chatbox"></div>
+    <div class="input-area">
+      <input id="input" type="text" placeholder="Ask me something...">
+      <button id="send">Send</button>
+    </div>
+  </div>
+
+ <script>
+  const chatbox = document.getElementById("chatbox");
+  const input = document.getElementById("input");
+  const send = document.getElementById("send");
+  const toggle = document.getElementById("modeToggle");
+
+  function addMessage(text, sender) {
+    const msg = document.createElement("div");
+    msg.className = sender;
+    msg.textContent = text;
+    chatbox.appendChild(msg);
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  send.addEventListener("click", async () => {
+    const query = input.value;
+    if (!query) return;
+    addMessage("You: " + query, "user");
+    input.value = "";
+
+    const response = await fetch("http://127.0.0.1:5000/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query })
+    });
+    const data = await response.json();
+    addMessage("Bot: " + data.response, "bot");
+  });
+  
+  input.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    e.preventDefault(); // stops page reload
+    send.click();       // triggers the same send logic
+  }
+});
+
+  // Dark mode toggle
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  });
+</script>
+</body>
+</html>
